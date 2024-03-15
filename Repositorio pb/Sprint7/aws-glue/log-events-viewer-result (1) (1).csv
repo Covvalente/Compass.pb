@@ -1,0 +1,393 @@
+timestamp,message
+1694904104286,"2023-09-16 22:41:44,283 main WARN JNDI lookup class is not available because this JRE does not support JNDI. JNDI string lookups will not be available, continuing configuration. java.lang.ClassNotFoundException: org.apache.logging.log4j.core.lookup.JndiLookup
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at org.apache.logging.log4j.util.LoaderUtil.loadClass(LoaderUtil.java:173)
+	at org.apache.logging.log4j.util.LoaderUtil.newInstanceOf(LoaderUtil.java:211)
+	at org.apache.logging.log4j.util.LoaderUtil.newCheckedInstanceOf(LoaderUtil.java:232)
+	at org.apache.logging.log4j.core.util.Loader.newCheckedInstanceOf(Loader.java:301)
+	at org.apache.logging.log4j.core.lookup.Interpolator.<init>(Interpolator.java:95)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.<init>(AbstractConfiguration.java:114)
+	at org.apache.logging.log4j.core.config.DefaultConfiguration.<init>(DefaultConfiguration.java:55)
+	at org.apache.logging.log4j.core.layout.PatternLayout$Builder.build(PatternLayout.java:430)
+	at org.apache.logging.log4j.core.layout.PatternLayout.createDefaultLayout(PatternLayout.java:324)
+	at org.apache.logging.log4j.core.appender.ConsoleAppender$Builder.<init>(ConsoleAppender.java:121)
+	at org.apache.logging.log4j.core.appender.ConsoleAppender.newBuilder(ConsoleAppender.java:111)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.logging.log4j.core.config.plugins.util.PluginBuilder.createBuilder(PluginBuilder.java:158)
+	at org.apache.logging.log4j.core.config.plugins.util.PluginBuilder.build(PluginBuilder.java:119)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.createPluginObject(AbstractConfiguration.java:813)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.createConfiguration(AbstractConfiguration.java:753)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.createConfiguration(AbstractConfiguration.java:745)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.doConfigure(AbstractConfiguration.java:389)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.initialize(AbstractConfiguration.java:169)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.start(AbstractConfiguration.java:181)
+	at org.apache.logging.log4j.core.LoggerContext.setConfiguration(LoggerContext.java:446)
+	at org.apache.logging.log4j.core.LoggerContext.reconfigure(LoggerContext.java:520)
+	at org.apache.logging.log4j.core.LoggerContext.reconfigure(LoggerContext.java:536)
+	at org.apache.logging.log4j.core.LoggerContext.start(LoggerContext.java:214)
+	at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:146)
+	at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:41)
+	at org.apache.logging.log4j.LogManager.getContext(LogManager.java:194)
+	at org.apache.logging.log4j.LogManager.getLogger(LogManager.java:597)
+	at org.apache.spark.metrics.sink.MetricsConfigUtils.<clinit>(MetricsConfigUtils.java:12)
+	at org.apache.spark.metrics.sink.MetricsProxyInfo.fromConfig(MetricsProxyInfo.java:17)
+	at com.amazonaws.services.glue.cloudwatch.CloudWatchLogsAppenderCommon.<init>(CloudWatchLogsAppenderCommon.java:62)
+	at com.amazonaws.services.glue.cloudwatch.CloudWatchLogsAppenderCommon$CloudWatchLogsAppenderCommonBuilder.build(CloudWatchLogsAppenderCommon.java:79)
+	at com.amazonaws.services.glue.cloudwatch.CloudWatchAppender.activateOptions(CloudWatchAppender.java:73)
+	at org.apache.log4j.config.PropertySetter.activate(PropertySetter.java:307)
+	at org.apache.log4j.config.PropertySetter.setProperties(PropertySetter.java:172)
+	at org.apache.log4j.config.PropertySetter.setProperties(PropertySetter.java:104)
+	at org.apache.log4j.PropertyConfigurator.parseAppender(PropertyConfigurator.java:842)
+	at org.apache.log4j.PropertyConfigurator.parseCategory(PropertyConfigurator.java:768)
+	at org.apache.log4j.PropertyConfigurator.configureRootCategory(PropertyConfigurator.java:648)
+	at org.apache.log4j.PropertyConfigurator.doConfigure(PropertyConfigurator.java:514)
+	at org.apache.log4j.PropertyConfigurator.doConfigure(PropertyConfigurator.java:580)
+	at org.apache.log4j.helpers.OptionConverter.selectAndConfigure(OptionConverter.java:526)
+	at org.apache.log4j.LogManager.<clinit>(LogManager.java:127)
+	at org.slf4j.impl.Log4jLoggerFactory.<init>(Log4jLoggerFactory.java:66)
+	at org.slf4j.impl.StaticLoggerBinder.<init>(StaticLoggerBinder.java:72)
+	at org.slf4j.impl.StaticLoggerBinder.<clinit>(StaticLoggerBinder.java:45)
+	at org.slf4j.LoggerFactory.bind(LoggerFactory.java:150)
+	at org.slf4j.LoggerFactory.performInitialization(LoggerFactory.java:124)
+	at org.slf4j.LoggerFactory.getILoggerFactory(LoggerFactory.java:412)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:357)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:383)
+	at org.apache.spark.network.util.JavaUtils.<clinit>(JavaUtils.java:41)
+	at org.apache.spark.internal.config.ConfigHelpers$.byteFromString(ConfigBuilder.scala:67)
+	at org.apache.spark.internal.config.ConfigBuilder.$anonfun$bytesConf$1(ConfigBuilder.scala:259)
+	at org.apache.spark.internal.config.ConfigBuilder.$anonfun$bytesConf$1$adapted(ConfigBuilder.scala:259)
+	at org.apache.spark.internal.config.TypedConfigBuilder.$anonfun$transform$1(ConfigBuilder.scala:101)
+	at org.apache.spark.internal.config.TypedConfigBuilder.createWithDefault(ConfigBuilder.scala:144)
+	at org.apache.spark.internal.config.package$.<init>(package.scala:345)
+	at org.apache.spark.internal.config.package$.<clinit>(package.scala)
+	at org.apache.spark.SparkConf$.<init>(SparkConf.scala:654)
+	at org.apache.spark.SparkConf$.<clinit>(SparkConf.scala)
+	at org.apache.spark.SparkConf.set(SparkConf.scala:94)
+	at org.apache.spark.SparkConf.$anonfun$loadFromSystemProperties$3(SparkConf.scala:76)
+	at scala.collection.TraversableLike$WithFilter.$anonfun$foreach$1(TraversableLike.scala:788)
+	at scala.collection.immutable.HashMap$HashMap1.foreach(HashMap.scala:230)
+	at scala.collection.immutable.HashMap$HashTrieMap.foreach(HashMap.scala:461)
+	at scala.collection.immutable.HashMap$HashTrieMap.foreach(HashMap.scala:461)
+	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:787)
+	at org.apache.spark.SparkConf.loadFromSystemProperties(SparkConf.scala:75)
+	at org.apache.spark.SparkConf.<init>(SparkConf.scala:70)
+	at org.apache.spark.SparkConf.<init>(SparkConf.scala:59)
+	at com.amazonaws.services.glue.SparkProcessLauncherPlugin.getSparkConf(ProcessLauncher.scala:41)
+	at com.amazonaws.services.glue.SparkProcessLauncherPlugin.getSparkConf$(ProcessLauncher.scala:40)
+	at com.amazonaws.services.glue.ProcessLauncher$$anon$1.getSparkConf(ProcessLauncher.scala:90)
+	at com.amazonaws.services.glue.ProcessLauncher.<init>(ProcessLauncher.scala:97)
+	at com.amazonaws.services.glue.ProcessLauncher.<init>(ProcessLauncher.scala:90)
+	at com.amazonaws.services.glue.ProcessLauncher$.main(ProcessLauncher.scala:29)
+	at com.amazonaws.services.glue.ProcessLauncher.main(ProcessLauncher.scala)
+
+"
+1694904104292,"2023-09-16 22:41:44,288 main INFO Log4j appears to be running in a Servlet environment, but there's no log4j-web module available. If you want better web container support, please add the log4j-web JAR to your web archive or server lib directory.
+"
+1694904143731,"StructType(List(StructField(sexo,StringType,true),StructField(total,StringType,true),StructField(ano,StringType,true),StructField(nome,StringType,true)))
+"
+1694904146477,"Número de linhas no DataFrame: 1825433
+"
+1694904154351,"Ano: 2014, Sexo: F, Contagem de Nomes: 19067
+Ano: 2014, Sexo: M, Contagem de Nomes: 13977
+Ano: 2013, Sexo: F, Contagem de Nomes: 19191
+Ano: 2013, Sexo: M, Contagem de Nomes: 14012
+Ano: 2012, Sexo: F, Contagem de Nomes: 19468
+Ano: 2012, Sexo: M, Contagem de Nomes: 14216
+"
+1694904154352,"Ano: 2011, Sexo: F, Contagem de Nomes: 19540
+Ano: 2011, Sexo: M, Contagem de Nomes: 14329
+Ano: 2010, Sexo: M, Contagem de Nomes: 14241
+Ano: 2010, Sexo: F, Contagem de Nomes: 19800
+Ano: 2009, Sexo: F, Contagem de Nomes: 20165
+Ano: 2009, Sexo: M, Contagem de Nomes: 14519
+Ano: 2008, Sexo: F, Contagem de Nomes: 20439
+Ano: 2008, Sexo: M, Contagem de Nomes: 14606
+Ano: 2007, Sexo: F, Contagem de Nomes: 20548
+Ano: 2007, Sexo: M, Contagem de Nomes: 14383
+Ano: 2006, Sexo: F, Contagem de Nomes: 20043
+Ano: 2006, Sexo: M, Contagem de Nomes: 14026
+Ano: 2005, Sexo: F, Contagem de Nomes: 19175
+Ano: 2005, Sexo: M, Contagem de Nomes: 13358
+Ano: 2004, Sexo: F, Contagem de Nomes: 18819
+Ano: 2004, Sexo: M, Contagem de Nomes: 13216
+Ano: 2003, Sexo: M, Contagem de Nomes: 12750
+Ano: 2003, Sexo: F, Contagem de Nomes: 18423
+Ano: 2002, Sexo: F, Contagem de Nomes: 18081
+Ano: 2002, Sexo: M, Contagem de Nomes: 12479
+Ano: 2001, Sexo: M, Contagem de Nomes: 12295
+Ano: 2001, Sexo: F, Contagem de Nomes: 17966
+Ano: 2000, Sexo: F, Contagem de Nomes: 17652
+Ano: 2000, Sexo: M, Contagem de Nomes: 12111
+Ano: 1999, Sexo: F, Contagem de Nomes: 16938
+Ano: 1999, Sexo: M, Contagem de Nomes: 11606
+Ano: 1998, Sexo: M, Contagem de Nomes: 11298
+Ano: 1998, Sexo: F, Contagem de Nomes: 16593
+Ano: 1997, Sexo: M, Contagem de Nomes: 10810
+Ano: 1997, Sexo: F, Contagem de Nomes: 16155
+Ano: 1996, Sexo: F, Contagem de Nomes: 15889
+Ano: 1996, Sexo: M, Contagem de Nomes: 10530
+Ano: 1995, Sexo: M, Contagem de Nomes: 10326
+Ano: 1995, Sexo: F, Contagem de Nomes: 15754
+Ano: 1994, Sexo: F, Contagem de Nomes: 15753
+Ano: 1994, Sexo: M, Contagem de Nomes: 10244
+Ano: 1993, Sexo: M, Contagem de Nomes: 10162
+"
+1694904154352,"Ano: 1993, Sexo: F, Contagem de Nomes: 15795
+Ano: 1992, Sexo: M, Contagem de Nomes: 9811
+Ano: 1992, Sexo: F, Contagem de Nomes: 15605
+Ano: 1991, Sexo: F, Contagem de Nomes: 15459
+"
+1694904154352,"Ano: 1991, Sexo: M, Contagem de Nomes: 9645
+Ano: 1990, Sexo: F, Contagem de Nomes: 15231
+Ano: 1990, Sexo: M, Contagem de Nomes: 9482
+Ano: 1989, Sexo: F, Contagem de Nomes: 14542
+Ano: 1989, Sexo: M, Contagem de Nomes: 9225
+Ano: 1988, Sexo: F, Contagem de Nomes: 13874
+Ano: 1988, Sexo: M, Contagem de Nomes: 8484
+Ano: 1987, Sexo: F, Contagem de Nomes: 13250
+Ano: 1987, Sexo: M, Contagem de Nomes: 8145
+Ano: 1986, Sexo: M, Contagem de Nomes: 7823
+Ano: 1986, Sexo: F, Contagem de Nomes: 12817
+Ano: 1985, Sexo: F, Contagem de Nomes: 12496
+Ano: 1985, Sexo: M, Contagem de Nomes: 7579
+Ano: 1984, Sexo: F, Contagem de Nomes: 12167
+Ano: 1984, Sexo: M, Contagem de Nomes: 7332
+Ano: 1983, Sexo: M, Contagem de Nomes: 7333
+Ano: 1983, Sexo: F, Contagem de Nomes: 12063
+Ano: 1982, Sexo: F, Contagem de Nomes: 12321
+Ano: 1982, Sexo: M, Contagem de Nomes: 7358
+"
+1694904154352,"Ano: 1981, Sexo: F, Contagem de Nomes: 12184
+Ano: 1981, Sexo: M, Contagem de Nomes: 7282
+Ano: 1980, Sexo: F, Contagem de Nomes: 12157
+"
+1694904154352,"Ano: 1980, Sexo: M, Contagem de Nomes: 7282
+Ano: 1979, Sexo: M, Contagem de Nomes: 7069
+"
+1694904154352,"Ano: 1979, Sexo: F, Contagem de Nomes: 11961
+Ano: 1978, Sexo: F, Contagem de Nomes: 11464
+"
+1694904154352,"Ano: 1978, Sexo: M, Contagem de Nomes: 6758
+Ano: 1977, Sexo: F, Contagem de Nomes: 11321
+Ano: 1977, Sexo: M, Contagem de Nomes: 6850
+"
+1694904154353,"Ano: 1976, Sexo: M, Contagem de Nomes: 6493
+Ano: 1976, Sexo: F, Contagem de Nomes: 10901
+Ano: 1975, Sexo: F, Contagem de Nomes: 10603
+Ano: 1975, Sexo: M, Contagem de Nomes: 6328
+Ano: 1974, Sexo: M, Contagem de Nomes: 6005
+Ano: 1974, Sexo: F, Contagem de Nomes: 10239
+Ano: 1973, Sexo: F, Contagem de Nomes: 9799
+Ano: 1973, Sexo: M, Contagem de Nomes: 5875
+Ano: 1972, Sexo: M, Contagem de Nomes: 5753
+Ano: 1972, Sexo: F, Contagem de Nomes: 9659
+Ano: 1971, Sexo: M, Contagem de Nomes: 5656
+Ano: 1971, Sexo: F, Contagem de Nomes: 9632
+Ano: 1970, Sexo: F, Contagem de Nomes: 9345
+Ano: 1970, Sexo: M, Contagem de Nomes: 5432
+Ano: 1969, Sexo: M, Contagem de Nomes: 5043
+Ano: 1969, Sexo: F, Contagem de Nomes: 8706
+Ano: 1968, Sexo: M, Contagem de Nomes: 4735
+Ano: 1968, Sexo: F, Contagem de Nomes: 8193
+Ano: 1967, Sexo: F, Contagem de Nomes: 7849
+Ano: 1967, Sexo: M, Contagem de Nomes: 4550
+Ano: 1966, Sexo: F, Contagem de Nomes: 7614
+Ano: 1966, Sexo: M, Contagem de Nomes: 4534
+Ano: 1965, Sexo: F, Contagem de Nomes: 7534
+Ano: 1965, Sexo: M, Contagem de Nomes: 4418
+Ano: 1964, Sexo: F, Contagem de Nomes: 7802
+Ano: 1964, Sexo: M, Contagem de Nomes: 4592
+Ano: 1963, Sexo: F, Contagem de Nomes: 7660
+Ano: 1963, Sexo: M, Contagem de Nomes: 4619
+Ano: 1962, Sexo: M, Contagem de Nomes: 4622
+Ano: 1962, Sexo: F, Contagem de Nomes: 7582"
+1694904154353,"
+Ano: 1961, Sexo: F, Contagem de Nomes: 7528
+Ano: 1961, Sexo: M, Contagem de Nomes: 4649
+Ano: 1960, Sexo: M, Contagem de Nomes: 4591
+Ano: 1960, Sexo: F, Contagem de Nomes: 7334
+"
+1694904154355,"Ano: 1959, Sexo: F, Contagem de Nomes: 7193
+Ano: 1959, Sexo: M, Contagem de Nomes: 4574
+Ano: 1958, Sexo: F, Contagem de Nomes: 7023
+Ano: 1958, Sexo: M, Contagem de Nomes: 4497
+Ano: 1957, Sexo: M, Contagem de Nomes: 4551
+Ano: 1957, Sexo: F, Contagem de Nomes: 7011
+Ano: 1956, Sexo: F, Contagem de Nomes: 6891
+Ano: 1956, Sexo: M, Contagem de Nomes: 4452
+Ano: 1955, Sexo: F, Contagem de Nomes: 6722
+Ano: 1955, Sexo: M, Contagem de Nomes: 4390
+Ano: 1954, Sexo: F, Contagem de Nomes: 6609
+Ano: 1954, Sexo: M, Contagem de Nomes: 4352
+Ano: 1953, Sexo: F, Contagem de Nomes: 6494
+Ano: 1953, Sexo: M, Contagem de Nomes: 4338
+Ano: 1952, Sexo: M, Contagem de Nomes: 4263
+Ano: 1952, Sexo: F, Contagem de Nomes: 6392
+Ano: 1951, Sexo: F, Contagem de Nomes: 6213
+Ano: 1951, Sexo: M, Contagem de Nomes: 4247
+Ano: 1950, Sexo: F, Contagem de Nomes: 6112
+Ano: 1950, Sexo: M, Contagem de Nomes: 4195
+Ano: 1949, Sexo: M, Contagem de Nomes: 4199
+Ano: 1949, Sexo: F, Contagem de Nomes: 6063
+Ano: 1948, Sexo: M, Contagem de Nomes: 4198
+Ano: 1948, Sexo: F, Contagem de Nomes: 6037
+Ano: 1947, Sexo: F, Contagem de Nomes: 6105
+Ano: 1947, Sexo: M, Contagem de Nomes: 4267
+Ano: 1946, Sexo: F, Contagem de Nomes: 5687
+Ano: 1946, Sexo: M, Contagem de Nomes: 4016
+Ano: 1945, Sexo: F, Contagem de Nomes: 5243
+Ano: 1945, Sexo: M, Contagem de Nomes: 3782
+Ano: 1944, Sexo: F, Contagem de Nomes: 5245
+Ano: 1944, Sexo: M, Contagem de Nomes: 3909
+Ano: 1943, Sexo: M, Contagem de Nomes: 4041
+Ano: 1943, Sexo: F, Contagem de Nomes: 5365
+Ano: 1942, Sexo: M, Contagem de Nomes: 4045
+Ano: 1942, Sexo: F, Contagem de Nomes: 5379
+Ano: 1941, Sexo: M, Contagem de Nomes: 3998
+Ano: 1941, Sexo: F, Contagem de Nomes: 5086
+Ano: 1940, Sexo: M, Contagem de Nomes: 3936
+Ano: 1940, Sexo: F, Contagem de Nomes: 5025
+Ano: 1939, Sexo: F, Contagem de Nomes: 4952
+Ano: 1939, Sexo: M, Contagem de Nomes: 3967
+Ano: 1938, Sexo: F, Contagem de Nomes: 4993
+Ano: 1938, Sexo: M, Contagem de Nomes: 4036
+Ano: 1937, Sexo: F, Contagem de Nomes: 4927
+Ano: 1937, Sexo: M, Contagem de Nomes: 4018
+Ano: 1936, Sexo: F, Contagem de Nomes: 4857
+Ano: 1936, Sexo: M, Contagem de Nomes: 4038
+Ano: 1935, Sexo: F, Contagem de Nomes: 4889
+Ano: 1935, Sexo: M, Contagem de Nomes: 4143
+Ano: 1934, Sexo: F, Contagem de Nomes: 4972
+Ano: 1934, Sexo: M, Contagem de Nomes: 4208
+Ano: 1933, Sexo: F, Contagem de Nomes: 4856
+Ano: 1933, Sexo: M, Contagem de Nomes: 4155
+Ano: 1932, Sexo: F, Contagem de Nomes: 5100
+Ano: 1932, Sexo: M, Contagem de Nomes: 4282
+Ano: 1931, Sexo: M, Contagem de Nomes: 4314
+Ano: 1931, Sexo: F, Contagem de Nomes: 4976
+Ano: 1930, Sexo: F, Contagem de Nomes: 5248
+Ano: 1930, Sexo: M, Contagem de Nomes: 4541
+Ano: 1929, Sexo: F, Contagem de Nomes: 5273
+Ano: 1929, Sexo: M, Contagem de Nomes: 4542
+Ano: 1928, Sexo: F, Contagem de Nomes: 5436
+Ano: 1928, Sexo: M, Contagem de Nomes: 4724
+Ano: 1927, Sexo: F, Contagem de Nomes: 5604
+Ano: 1927, Sexo: M, Contagem de Nomes: 4803
+Ano: 1926, Sexo: M, Contagem de Nomes: 4839
+Ano: 1926, Sexo: F, Contagem de Nomes: 5622
+Ano: 1925, Sexo: F, Contagem de Nomes: 5774
+Ano: 1925, Sexo: M, Contagem de Nomes: 4868
+Ano: 1924, Sexo: F, Contagem de Nomes: 5899
+Ano: 1924, Sexo: M, Contagem de Nomes: 4968
+Ano: 1923, Sexo: M, Contagem de Nomes: 4905
+Ano: 1923, Sexo: F, Contagem de Nomes: 5738
+Ano: 1922, Sexo: F, Contagem de Nomes: 5789
+Ano: 1922, Sexo: M, Contagem de Nomes: 4968
+Ano: 1921, Sexo: F, Contagem de Nomes: 5870
+Ano: 1921, Sexo: M, Contagem de Nomes: 4986
+Ano: 1920, Sexo: F, Contagem de Nomes: 5765
+Ano: 1920, Sexo: M, Contagem de Nomes: 4991
+Ano: 1919, Sexo: F, Contagem de Nomes: 5561
+Ano: 1919, Sexo: M, Contagem de Nomes: 4809
+Ano: 1918, Sexo: F, Contagem de Nomes: 5586
+Ano: 1918, Sexo: M, Contagem de Nomes: 4814
+Ano: 1917, Sexo: M, Contagem de Nomes: 4602
+Ano: 1917, Sexo: F, Contagem de Nomes: 5313
+Ano: 1916, Sexo: M, Contagem de Nomes: 4534
+Ano: 1916, Sexo: F, Contagem de Nomes: 5162
+Ano: 1915, Sexo: M, Contagem de Nomes: 4390
+Ano: 1915, Sexo: F, Contagem de Nomes: 4968
+Ano: 1914, Sexo: F, Contagem de Nomes: 4204
+Ano: 1914, Sexo: M, Contagem de Nomes: 3759
+Ano: 1913, Sexo: F, Contagem de Nomes: 3707
+Ano: 1913, Sexo: M, Contagem de Nomes: 3260
+Ano: 1912, Sexo: M, Contagem de Nomes: 2906
+Ano: 1912, Sexo: F, Contagem de Nomes: 3445
+Ano: 1911, Sexo: F, Contagem de Nomes: 2868
+Ano: 1911, Sexo: M, Contagem de Nomes: 1999
+Ano: 1910, Sexo: F, Contagem de Nomes: 2790
+Ano: 1910, Sexo: M, Contagem de Nomes: 1839
+Ano: 1909, Sexo: M, Contagem de Nomes: 1679
+Ano: 1909, Sexo: F, Contagem de Nomes: 2548
+Ano: 1908, Sexo: F, Contagem de Nomes: 2434
+Ano: 1908, Sexo: M, Contagem de Nomes: 1584
+Ano: 1907, Sexo: F, Contagem de Nomes: 2399
+Ano: 1907, Sexo: M, Contagem de Nomes: 1549
+Ano: 1906, Sexo: F, Contagem de Nomes: 2220
+Ano: 1906, Sexo: M, Contagem de Nomes: 1413
+Ano: 1905, Sexo: F, Contagem de Nomes: 2235
+Ano: 1905, Sexo: M, Contagem de Nomes: 1421
+Ano: 1904, Sexo: F, Contagem de Nomes: 2166
+Ano: 1904, Sexo: M, Contagem de Nomes: 1395
+Ano: 1903, Sexo: M, Contagem de Nomes: 1306
+Ano: 1903, Sexo: F, Contagem de Nomes: 2083
+Ano: 1902, Sexo: F, Contagem de Nomes: 2042
+Ano: 1902, Sexo: M, Contagem de Nomes: 1320
+Ano: 1901, Sexo: F, Contagem de Nomes: 1943
+Ano: 1901, Sexo: M, Contagem de Nomes: 1210
+Ano: 1900, Sexo: M, Contagem de Nomes: 1506
+Ano: 1900, Sexo: F, Contagem de Nomes: 2225
+Ano: 1899, Sexo: F, Contagem de Nomes: 1842
+Ano: 1899, Sexo: M, Contagem de Nomes: 1200
+Ano: 1898, Sexo: M, Contagem de Nomes: 1289
+Ano: 1898, Sexo: F, Contagem de Nomes: 1975
+Ano: 1897, Sexo: F, Contagem de Nomes: 1799
+Ano: 1897, Sexo: M, Contagem de Nomes: 1229
+Ano: 1896, Sexo: F, Contagem de Nomes: 1825
+Ano: 1896, Sexo: M, Contagem de Nomes: 1266
+Ano: 1895, Sexo: M, Contagem de Nomes: 1241
+Ano: 1895, Sexo: F, Contagem de Nomes: 1808
+Ano: 1894, Sexo: M, Contagem de Nomes: 1239
+Ano: 1894, Sexo: F, Contagem de Nomes: 1702
+Ano: 1893, Sexo: F, Contagem de Nomes: 1652
+Ano: 1893, Sexo: M, Contagem de Nomes: 1179
+Ano: 1892, Sexo: F, Contagem de Nomes: 1661
+Ano: 1892, Sexo: M, Contagem de Nomes: 1260
+Ano: 1891, Sexo: F, Contagem de Nomes: 1533
+Ano: 1891, Sexo: M, Contagem de Nomes: 1127
+Ano: 1890, Sexo: F, Contagem de Nomes: 1534
+Ano: 1890, Sexo: M, Contagem de Nomes: 1161
+Ano: 1889, Sexo: F, Contagem de Nomes: 1479
+Ano: 1889, Sexo: M, Contagem de Nomes: 1111
+Ano: 1888, Sexo: M, Contagem de Nomes: 1177
+Ano: 1888, Sexo: F, Contagem de Nomes: 1474
+Ano: 1887, Sexo: F, Contagem de Nomes: 1306
+Ano: 1887, Sexo: M, Contagem de Nomes: 1067
+Ano: 1886, Sexo: M, Contagem de Nomes: 1110
+Ano: 1886, Sexo: F, Contagem de Nomes: 1282
+Ano: 1885, Sexo: F, Contagem de Nomes: 1197
+Ano: 1885, Sexo: M, Contagem de Nomes: 1097
+Ano: 1884, Sexo: F, Contagem de Nomes: 1172
+Ano: 1884, Sexo: M, Contagem de Nomes: 1125
+Ano: 1883, Sexo: F, Contagem de Nomes: 1054
+Ano: 1883, Sexo: M, Contagem de Nomes: 1030
+Ano: 1882, Sexo: F, Contagem de Nomes: 1028
+Ano: 1882, Sexo: M, Contagem de Nomes: 1099
+Ano: 1881, Sexo: M, Contagem de Nomes: 997
+Ano: 1881, Sexo: F, Contagem de Nomes: 938
+Ano: 1880, Sexo: F, Contagem de Nomes: 942
+Ano: 1880, Sexo: M, Contagem de Nomes: 1058
+"
+1694904159043,"O nome feminino com mais registros é 'Katie' com 135 registros.
+"
+1694904162782,"O nome masculino com mais registros é 'Michael' com 135 registros.
+"
+1694904166559,"Ano: 1880, Sexo: F, Contagem: 942
+Ano: 1880, Sexo: M, Contagem: 1058
+Ano: 1881, Sexo: M, Contagem: 997
+Ano: 1881, Sexo: F, Contagem: 938
+Ano: 1882, Sexo: M, Contagem: 1099
+Ano: 1882, Sexo: F, Contagem: 1028
+Ano: 1883, Sexo: F, Contagem: 1054
+Ano: 1883, Sexo: M, Contagem: 1030
+Ano: 1884, Sexo: M, Contagem: 1125
+Ano: 1884, Sexo: F, Contagem: 1172
+"

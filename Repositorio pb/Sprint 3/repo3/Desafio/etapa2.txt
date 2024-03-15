@@ -1,3 +1,0 @@
-A média do número de filmes por autor:
-
-428.69
