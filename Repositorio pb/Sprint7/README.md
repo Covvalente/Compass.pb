@@ -2,7 +2,7 @@
 
 # hadoop e map reduce
 
-Aqui está uma organização do texto em tópicos principais com explicações:
+
 
 - **Distributed Computing**:
     - Descreve como a computação distribuída é uma abordagem melhor para processar grandes volumes de dados, permitindo o uso de vários servidores para reduzir o tempo de processamento e proporcionar escalabilidade quase ilimitada.
@@ -31,7 +31,7 @@ Aqui está uma organização do texto em tópicos principais com explicações:
 - **Desenvolvimento de Programas MapReduce**:
     - Descrição dos passos necessários para desenvolver e executar programas MapReduce no Hadoop, incluindo a especificação de caminhos de entrada e saída, e a verificação de parâmetros passados.
 
-Essa organização facilita a compreensão e a referência aos diferentes aspectos do Hadoop e do desenvolvimento de programas MapReduce no ambiente Hadoop.
+
 
 # Spark
 
